@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Starbucks Inspired</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<section>
+		<div class="circle"></div>
+		<header>
+			<a href="#" class="logo"><img src="plugie1.png"></a>
+			<div class="toggle" onclick="toggleMenu();"></div>
+			<ul class="navigation">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Menu</a></li>
+				<li><a href="#">What's New</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</header>
+		<div class="content">
+			<div class="textBox">
+				<h2>Karibu<span> Sana.</span> <br>You just got <span>Plugged</span></h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				</p>
+				<a href="#">Learn More</a>
+			</div>
+			<div class="imgBox">
+				<img src="whiskey.png" class="starbucks">
+			</div>
+		</div>
+	
+		<ul class="thumb">
+			<li><img src="mpag.png" onclick="imgSlider('mpag.png');changeCircleColor('#b76e79')"></li>
+			<li><img src="whiskey.png" onclick="imgSlider('whiskey.png');changeCircleColor('#E38200')"></li>
+			<li><img src="wine.png" onclick="imgSlider('wine.png');changeCircleColor('#800000')"></li>
+			<li><img src="vodka.png" onclick="imgSlider('vodk.png');changeCircleColor('#b76e79')"></li>
+			<li><img src="small.png" onclick="imgSlider('small.png');changeCircleColor('#E38200')"></li>
+			<li><img src="bb.png" onclick="imgSlider('bb.png');changeCircleColor('#800000')"></li>
+
+		</ul>
+		<ul class="sci">
+			<li><a href="#"><img src="fb.png"></a></li>
+			<li><a href="#"><img src="twitter.png"></a></li>
+			<li><a href="#"><img src="instagram.png"></a></li>
+		</ul>
+	</section>
+	<script type="text/javascript">
+		function imgSlider(anything){
+			document.querySelector('.starbucks').src = anything;
+		}
+		function changeCircleColor(color){
+			const circle = document.querySelector('.circle');
+			circle.style.background = color;
+		}
+		function toggleMenu(){
+			var menuToggle = document.querySelector('.toggle');
+			var navigation = document.querySelector('.navigation');
+			menuToggle.classList.toggle('active')
+			navigation.classList.toggle('active')
+		}
+	</script>
+</body>
+</html>
